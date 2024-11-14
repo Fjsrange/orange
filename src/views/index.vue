@@ -30,7 +30,6 @@ onUnmounted(() => {
 
 <template>
   <div>
-    views
     <Home></Home>
     <div
       class="top-btn"

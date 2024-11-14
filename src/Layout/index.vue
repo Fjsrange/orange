@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Header from "@/Layout/Header/index.vue";
-import Content from "@/Layout/Content/index.vue";
+import Header from "../Layout/Header/index.vue";
+import Content from "../Layout/Content/index.vue";
 // import Header from "../Layout/Header/index.vue";
 // import Content from "../Layout/Content/index.vue";
 // import Menu from "../Layout/Menu/index.vue";

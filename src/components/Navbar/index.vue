@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watchEffect, reactive } from "vue";
-import { useTheme } from "@/hooks/useTheme";
+import { useTheme } from "../../hooks/useTheme";
 
 // 切换背景色
 const { theme, toggleTheme } = useTheme();
@@ -29,7 +29,10 @@ const handleScroll = () => {
   // 你可以在这里做一些操作，展示结果或控制其他元素
   const ghHeader = document.querySelector(".gh-header");
   if (ghHeader) {
-    ghHeader.style.backdropFilter = `blur(${Math.min(blurValue, 6)}px)`; // 限制最大模糊度
+    (ghHeader as HTMLElement).style.backdropFilter = `blur(${Math.min(
+      blurValue,
+      6
+    )}px)`; // 限制最大模糊度
   }
 };
 
@@ -67,6 +70,7 @@ watchEffect(() => {
         :class="{ active: selectItem === index }"
         v-for="(item, index) in list"
         :key="index"
+        @click="$router.push(item.path)"
       >
         {{ item.name }}
       </div>
