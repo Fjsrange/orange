@@ -11,7 +11,7 @@ export default defineConfig({
   },
   base: "/",
   server: {
-    port: 3000, // 设置端口号
+    port: 8080, // 设置端口号
   },
   resolve: {
     alias: {
