@@ -52,7 +52,7 @@ jobs:
 
         with:
           # Upload dist folder dist文件夹地址
-          path: "../../dist"
+          path: "/dist"
 
       # - name: Add SSH known hosts
       #   run: |
