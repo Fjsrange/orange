@@ -9,9 +9,13 @@ export default defineConfig({
   define: {
     "process.env": {},
   },
-  base: "/",
+  base: "/orange/", // 设置打包路径
+  publicDir: '/orange/', // 设置公共目录
+  build: {
+    outDir: 'dist', // 设置打包输出目录
+  },
   server: {
-    port: 8080, // 设置端口号
+    port: 3001, // 设置端口号
   },
   resolve: {
     alias: {
