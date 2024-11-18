@@ -8,7 +8,7 @@ const { theme, toggleTheme } = useTheme();
 const isDesktop = ref<boolean>(true); // 是否为桌面端
 const isMenuOpen = ref<boolean>(false); // 是否展开菜单
 const opacity = ref<number>(0); // 透明度
-const selectItem = ref<number>(1); // 当前选中的菜单项
+const selectItem = ref<number>(0); // 当前选中的菜单项
 // 初始化 list 数据
 const list = reactive([
   { name: "首页", base: "/", path: "/" },

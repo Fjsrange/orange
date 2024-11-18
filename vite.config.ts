@@ -8,8 +8,9 @@ export default defineConfig({
   define: {
     "process.env": {},
   },
-  base: "/orange/", // 设置打包路径
-  publicDir: '/orange/', // 设置公共目录
+  // base: "/orange/", // 设置打包路径
+  // publicDir: '/orange/', // 设置公共目录
+  base: "/", // 设置打包路径
   build: {
     outDir: 'dist', // 设置打包输出目录
   },
