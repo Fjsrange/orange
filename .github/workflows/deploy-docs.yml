@@ -47,13 +47,13 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
-      # - name: Setup SSH agent
-      #   uses: webfactory/ssh-agent@v0.5.6
+        # - name: Setup SSH agent
+        #   uses: webfactory/ssh-agent@v0.5.6
 
         with:
           # Upload dist folder
-          path: "dist/"
-      
+          path: "../../dist"
+
       # - name: Add SSH known hosts
       #   run: |
       #     ssh-keyscan github.com >> ~/.ssh/known_hosts
