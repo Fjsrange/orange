@@ -56,4 +56,51 @@
     flex-direction: column;
   }
 }
+
+/* 手机的样式 */
+@media screen and (max-width: 768px) {
+  .warp {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .item-warp {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      .warp-item {
+        width: 22rem;
+        height: 11.7rem;
+        /* height: 7.63rem; */
+        border-radius: 1.5rem;
+        padding: 2rem 2.5rem;
+        border: 1px solid #ccc;
+      }
+    }
+    .item-warp2 {
+      width: 22rem;
+      margin-left: 0;
+      height: 14rem;
+      margin-bottom: 20px;
+    }
+  }
+  .gh-space {
+    gap: 16px;
+    .size-m {
+      gap: 16px;
+    }
+  }
+  /* .item-warp {
+    .warp-item {
+      width: 100%;
+      height: 7.63rem;
+    }
+  } */
+  /* .item-warp2 {
+    width: 100%;
+    margin-left: 0;
+    height: 25rem;
+  } */
+}
 </style>

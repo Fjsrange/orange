@@ -6,7 +6,6 @@ import { useTheme } from "../../hooks/useTheme";
 const { theme, toggleTheme } = useTheme();
 
 const isDesktop = ref<boolean>(true); // 是否为桌面端
-const isMenuOpen = ref<boolean>(false); // 是否展开菜单
 const opacity = ref<number>(0); // 透明度
 const selectItem = ref<number>(0); // 当前选中的菜单项
 // 初始化 list 数据
@@ -119,19 +118,6 @@ watchEffect(() => {
         alt="Search Icon"
         class="search-icon"
       />
-      <div @click="isMenuOpen = !isMenuOpen" class="menu">
-        <img
-          src="@/assets/icons/menu-icon.png"
-          alt="Menu Icon"
-          class="menu-icon"
-        />
-      </div>
-      <ul v-show="isMenuOpen" class="mobile-nav">
-        <li><a href="#">首页</a></li>
-        <li><a href="#">分享</a></li>
-        <li><a href="#">资源信息</a></li>
-        <li><a href="#">关于我</a></li>
-      </ul>
     </div>
   </header>
 </template>
@@ -296,6 +282,44 @@ watchEffect(() => {
   border-bottom: 1px solid var(--gray1);
 }
 
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: none;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .menu-icon {
+    width: 26px;
+  }
+  .search-icon {
+    height: 20px;
+  }
+
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li a {
+      text-decoration: none;
+      color: var(--textColor);
+      padding: 10px 20px;
+      display: block;
+    }
+  }
+}
 /* .navbar {
   display: flex;
   justify-content: space-between;

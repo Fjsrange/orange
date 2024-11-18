@@ -11,6 +11,20 @@
       // 当使用@/时，指向src目录下的文件
       "@/*": ["src/*"]
     }
+    // "paths": {
+    //   "@/*": ["src/*"],
+    //   "@assets/*": ["src/assets/*"],
+    //   "@components/*": ["src/components/*"],
+    //   "@views/*": ["src/views/*"],
+    //   "@router/*": ["src/router/*"],
+    //   "@store/*": ["src/store/*"],
+    //   "@utils/*": ["src/utils/*"],
+    //   "@api/*": ["src/api/*"],
+    //   "@hooks/*": ["src/hooks/*"],
+    //   "@styles/*": ["src/styles/*"],
+    //   "@types/*": ["src/types/*"],
+    //   "@constants/*": ["src/constants/*"],
+    // }
   },
   // 配置文件中排除的文件夹
   "exclude": ["node_modules", "dist"]

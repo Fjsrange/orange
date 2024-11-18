@@ -63,4 +63,19 @@ onUnmounted(() => {
     transform: translateY(0); /* 显示时的偏移为0 */
   }
 }
+
+@media (max-width: 768px) {
+  .top-btn {
+    position: fixed;
+    bottom: 86px;
+    right: 12px;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+}
 </style>
