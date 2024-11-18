@@ -1,0 +1,12 @@
+
+.gh-space {
+  display: flex;
+  transition: all 0.2s ease-in-out;
+  gap: 32px;
+  .size-m {
+    gap: 24px;
+  }
+  .dir-vertical {
+    flex-direction: column;
+  }
+}

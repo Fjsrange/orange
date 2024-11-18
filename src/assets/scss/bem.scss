@@ -1,0 +1,43 @@
+$namespace: "gh" !default; // default的意思是，如果用户没有定义这个变量，那么就使用默认值
+$block-sel: "-" !default; // $block-sel 是block选择器的后缀，gh-
+$elem-sel: "__" !default; // $elem-sel 是element选择器的后缀，gh-block__inner
+$mod-sel: "--" !default; // $mod-sel 是modifier选择器的后缀，gh-block--mod
+
+@mixin bfc {
+  height: 100%;
+  overflow: hidden;
+}
+
+// gh-block
+@mixin b($block) {
+  $B: #{$namespace + $block-sel + $block};
+  .#{$B} {
+    @content; // @content是scss的一个语法，表示将@include的内容插入到@include的位置
+  }
+}
+
+// gh-block__inner
+@mixin e($el) {
+  $selector: &;
+  // 使用@at-root将选择器从嵌套中移出来,将选择器从'.gh-block .gh-block__inner'移出来，变成'.gh-block__inner'
+  @at-root {
+    #{$selector + $elem-sel + $el} {
+      @content;
+    }
+  }
+}
+
+// gh-block--mod
+@mixin m($m) {
+  // 定义一个变量$selector，其值为&，即当前选择器的引用
+  $selector: &;
+  // 使用@at-root将选择器从嵌套中移出来,将选择器从'.gh-block .gh-block--mod'移出来，变成'.gh-block--mod'
+  // 使用@at-root指令，将选择器放置在根目录下
+  @at-root {
+    // 将选择器、修饰符选择器和m选择器进行拼接
+    #{$selector + $mod-sel + $m} {
+      // 执行@content指令，将内容放置在拼接后的选择器中
+      @content;
+    }
+  }
+}

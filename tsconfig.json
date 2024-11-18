@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    // 设置路径别名
+    "baseUrl": "./", // 这里设置为项目的根目录，或者如果你希望是 `src` 目录，则设置为 "src"
+    "paths": {
+      // 当使用@/时，指向src目录下的文件
+      "@/*": ["src/*"]
+    }
+  },
+  // 配置文件中排除的文件夹
+  "exclude": ["node_modules", "dist"]
+}
