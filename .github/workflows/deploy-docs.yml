@@ -51,8 +51,8 @@ jobs:
         #   uses: webfactory/ssh-agent@v0.5.6
 
         with:
-          # Upload dist folder dist文件夹地址
-          path: "/dist"
+          # Upload dist folder
+          path: "dist/"
 
       # - name: Add SSH known hosts
       #   run: |
