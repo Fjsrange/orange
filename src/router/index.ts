@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 const pages = import.meta.glob("../views/**/page.ts", {
   eager: true,
@@ -20,7 +20,7 @@ const routes: Array<any> = Object.entries(pages).map(([path, meta]) => {
 });
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 
