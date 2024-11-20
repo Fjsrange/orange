@@ -23,7 +23,7 @@ const cssList:Page = {
   list: [
     {
       name: '基础样式',
-      url: '../assets/images/css/basic',
+      url: '../assets/images/css/basic.jpeg',
       explain: 'css基础样式',
       tag: [
         '基础',
@@ -32,7 +32,7 @@ const cssList:Page = {
     },
     {
       name: '文本样式',
-      url: '../assets/images/css/basic',
+      url: '../assets/images/css/basic.jpeg',
       explain: 'css基础样式',
       tag: [
         'css',
@@ -41,7 +41,7 @@ const cssList:Page = {
     },
     {
       name: '列表样式',
-      url: '../assets/images/css/basic',
+      url: '../assets/images/css/basic.jpeg',
       explain: 'css基础样式',
       tag: [
         'css',
@@ -50,7 +50,7 @@ const cssList:Page = {
     },
     {
       name: '表格样式',
-      url: '../assets/images/css/basic',
+      url: '../assets/images/css/basic.jpeg',
       explain: 'css基础样式',
       tag: [
         'css',

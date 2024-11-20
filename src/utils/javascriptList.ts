@@ -18,11 +18,11 @@ interface Page {
 
 // 使用 Page 接口来类型化 cssList 数组
 const JSList:Page = {
-  title: 'CSS',
+  title: 'JavaScript',
   list: [
     {
       name: '基础样式',
-      url: '../assets/images/css/basic',
+      url: '../assets/images/css/basic.jpeg',
       explain: 'JavaScript基础',
       tag: [
         'js',
@@ -31,7 +31,7 @@ const JSList:Page = {
     },
     {
       name: '文本样式',
-      url: '../assets/images/css/basic',
+      url: '../assets/images/css/basic.jpeg',
       explain: 'JavaScript样式',
       tag: [
         'css',
@@ -40,7 +40,7 @@ const JSList:Page = {
     },
     {
       name: '列表样式',
-      url: '../assets/images/css/basic',
+      url: '../assets/images/css/basic.jpeg',
       explain: 'JavaScript',
       tag: [
         'css',
@@ -49,7 +49,7 @@ const JSList:Page = {
     },
     {
       name: '表格样式',
-      url: '../assets/images/css/basic',
+      url: '../assets/images/css/basic.jpeg',
       explain: 'JavaScript',
       tag: [
         'css',

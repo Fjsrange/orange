@@ -3,7 +3,7 @@
     <div class="title__name">{{ props.title }}</div>
     <div class="learn-item">
       <div class="item gh-space" v-for="item in props.list">
-        <img :src="item.url" alt="" />
+        <img :src="'orange/' + item.url" alt="" />
         <div class="item__msg">
           <div class="item__msg-name">
             {{ item.name }}
