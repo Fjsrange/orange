@@ -3,7 +3,7 @@
     <div class="title__name">{{ props.title }}</div>
     <div class="learn-item">
       <div class="item gh-space" v-for="item in props.list">
-        <img :src="'orange/' + item.url" alt="" />
+        <img :src="'/orange' + item.url" alt="item.name" />
         <div class="item__msg">
           <div class="item__msg-name">
             {{ item.name }}
@@ -21,6 +21,14 @@
 </template>
 <script setup lang="ts">
 import { defineProps, PropType } from "vue";
+// 使用动态导入
+// const getImageUrl = (name: string) =>
+//   new URL(`../../assets/images/css/basic.jpeg`, import.meta.url).href;
+// console.log("getImageUrl", getImageUrl);
+// console.log(
+//   "new URL(name, import.meta.url)",
+//   new URL("../assets/images/css/basic.jpeg", import.meta.url)
+// );
 
 interface List {
   name: string;
@@ -32,8 +40,6 @@ const props = defineProps({
   title: String,
   list: Array as PropType<List[]>,
 });
-console.log(props.title); // 这将是 "基础"
-console.log(props.list); // 这将是 List[] 类型的数组
 </script>
 <style scoped lang="scss">
 .learn {
@@ -47,7 +53,7 @@ console.log(props.list); // 这将是 List[] 类型的数组
       margin: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3),
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3),
         -2px -2px 5px 0px rgba(0, 0, 0, 0.1);
       display: block;
       flex-direction: column;
@@ -60,13 +66,13 @@ console.log(props.list); // 这将是 List[] 类型的数组
         height: 60%;
       }
       .item__msg {
-        padding: 10px;
+        padding: 0 10px;
         font-size: 1.2rem;
         font-weight: 600;
         color: #333;
 
         .item__msg-name {
-          margin-top: 10px;
+          margin-top: 5px;
           font-size: 1.2rem;
           font-weight: 600;
           color: #333;
@@ -96,7 +102,7 @@ console.log(props.list); // 这将是 List[] 类型的数组
       .item {
         height: 16rem;
         width: 22rem;
-        padding: 10px;
+        /* padding: 10px; */
         margin: 10px 0;
         border: 1px solid #ccc;
         border-radius: 5px;
