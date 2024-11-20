@@ -8,10 +8,15 @@
       <div class="item-warp2">item</div>
     </div>
 
-    <div class="item" v-for="item in 100">{{ item }}</div>
+    <Learn :title="cssList.title" :list="cssList.list"></Learn>
+    <Learn :title="JSList.title" :list="JSList.list"></Learn>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Learn from "../../components/Learn/index.vue";
+import cssList from "../../utils/cssList";
+import JSList from "../../utils/javascriptList";
+</script>
 <style scoped lang="scss">
 .warp {
   display: flex;
@@ -37,13 +42,6 @@
     border-radius: 1.5rem;
     border: 1px solid #ccc;
   }
-}
-.item {
-  height: 30px;
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 .gh-space {
   display: flex;

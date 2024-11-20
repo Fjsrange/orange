@@ -8,7 +8,7 @@ import pageList from "./utils/pageList";
   <div class="gh-content">
     <router-view></router-view>
 
-    <div class="gh-home-footer">
+    <div class="gh-home-footer phone">
       <div
         class="footer-aaa"
         v-for="item in pageList"
@@ -37,15 +37,21 @@ import pageList from "./utils/pageList";
     flex-direction: column;
     padding: 8.75rem;
   }
+  .phone {
+    display: none;
+  }
 }
 /* 手机 */
 @media screen and (max-width: 768px) {
+  .phone {
+    display: block;
+  }
   @include b(content) {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 4.75rem;
+    padding: 4.75rem 0.73rem;
   }
 
   .gh-home-footer {
