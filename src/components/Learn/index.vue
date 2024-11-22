@@ -3,7 +3,7 @@
     <div class="title__name">{{ props.title }}</div>
     <div class="learn-item">
       <div class="item gh-space" v-for="item in props.list">
-        <img :src="'/orange' + item.url" alt="item.name" />
+        <img v-for="image in imageList" :src="image" alt="item.name" />
         <div class="item__msg">
           <div class="item__msg-name">
             {{ item.name }}
@@ -21,14 +21,16 @@
 </template>
 <script setup lang="ts">
 import { defineProps, PropType } from "vue";
-// 使用动态导入
-// const getImageUrl = (name: string) =>
-//   new URL(`../../assets/images/css/basic.jpeg`, import.meta.url).href;
-// console.log("getImageUrl", getImageUrl);
-// console.log(
-//   "new URL(name, import.meta.url)",
-//   new URL("../assets/images/css/basic.jpeg", import.meta.url)
-// );
+
+// 使用动态导入所有图片
+let imageList: Record<string, string> = import.meta.glob(
+  "../../assets/images/css/*.*",
+  {
+    eager: true,
+    import: "default",
+  }
+);
+console.log("index.vue", imageList);
 
 interface List {
   name: string;

@@ -23,7 +23,7 @@ const cssList:Page = {
   list: [
     {
       name: '基础样式',
-      url: '/src/assets/images/css/basic.jpeg',
+      url: new URL('../assets/images/css/basic.png', import.meta.url).href, // 使用 new URL() 来获取图片的绝对路径
       explain: 'css基础样式',
       tag: [
         '基础',
