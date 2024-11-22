@@ -13,6 +13,7 @@
   </div>
 </template>
 <script setup lang="ts">
+// import Learn from "@/components/Learn/index.vue";
 import Learn from "../../components/Learn/index.vue";
 import cssList from "../../utils/cssList";
 import JSList from "../../utils/javascriptList";
