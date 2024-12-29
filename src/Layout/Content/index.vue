@@ -9,7 +9,12 @@
     </div>
 
     <Learn :title="cssList.title" :list="cssList.list"></Learn>
+
     <Learn :title="JSList.title" :list="JSList.list"></Learn>
+
+    <!-- <Learn :title="cssList.title" :list="cssList.list"></Learn>
+
+    <Learn :title="JSList.title" :list="JSList.list"></Learn> -->
   </div>
 </template>
 <script setup lang="ts">
