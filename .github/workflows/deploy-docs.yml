@@ -54,6 +54,7 @@ jobs:
           # Upload dist folder
           path: "dist/"
 
+          target-folder: .github/workflows/deployed-docs # 自定义部署目录
       # - name: Add SSH known hosts
       #   run: |
       #     ssh-keyscan github.com >> ~/.ssh/known_hosts
