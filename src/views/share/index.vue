@@ -1,3 +1,12 @@
+<template>
+  <div class="">分享</div>
+</template>
+
+<script setup lang="ts"></script>
+<style scoped></style>
+
+<!--
+在线编辑word文档
 <script>
 import vueOfficeWord from "@vue-office/docx";
 import myUpload from "../../components/myUpload/index.vue";
@@ -53,3 +62,4 @@ export default {
   }
 }
 </style>
+ -->

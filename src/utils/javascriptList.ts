@@ -14,7 +14,7 @@ const imageModules = import.meta.glob('@/assets/images/JavaScript/*.{png,jpg,jpe
 interface List {
   name: string,
   url: string,
-  explain: string,
+  info: string,
   tag: string[]
 }
 
@@ -44,7 +44,7 @@ const JSList:Page = {
     return {
       name,
       url,
-      explain: '描述 ' + name, // 示例描述，根据实际情况修改
+      info: '描述 ' + name, // 示例描述，根据实际情况修改
       tag: ['标签', '标签2'] // 示例标签，根据实际情况修改
     };
   })
@@ -52,7 +52,7 @@ const JSList:Page = {
   //   {
   //     name: '基础样式',
   //     url: '/src/assets/images/JavaScript/basic.jpeg',
-  //     explain: 'JavaScript基础',
+  //     info: 'JavaScript基础',
   //     tag: [
   //       'js',
   //       '基础样式'
@@ -61,7 +61,7 @@ const JSList:Page = {
   //   {
   //     name: '文本样式',
   //     url: '/src/assets/images/JavaScript/basic.jpeg',
-  //     explain: 'JavaScript样式',
+  //     info: 'JavaScript样式',
   //     tag: [
   //       'JavaScript',
   //       '基础样式'
@@ -70,7 +70,7 @@ const JSList:Page = {
   //   {
   //     name: '列表样式',
   //     url: '/src/assets/images/JavaScript/basic.jpeg',
-  //     explain: 'JavaScript',
+  //     info: 'JavaScript',
   //     tag: [
   //       'JavaScript',
   //       '基础样式'
@@ -79,7 +79,7 @@ const JSList:Page = {
   //   {
   //     name: '表格样式',
   //     url: '/src/assets/images/JavaScript/basic.jpeg',
-  //     explain: 'JavaScript',
+  //     info: 'JavaScript',
   //     tag: [
   //       'JavaScript',
   //       '基础样式'

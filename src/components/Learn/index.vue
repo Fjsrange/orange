@@ -15,8 +15,8 @@
           <div class="item__msg-name">
             {{ item.name }}
           </div>
-          <div class="item__msg-explain">
-            {{ item.explain }}
+          <div class="item__msg-info">
+            {{ item.info }}
           </div>
           <div class="item__msg-tag">
             <div v-for="tag in item.tag">{{ tag }}</div>
@@ -32,7 +32,7 @@ import { defineProps, PropType } from "vue";
 interface List {
   name: string;
   url: string;
-  explain: string;
+  info: string;
   tag: string[];
 }
 const { title, list } = defineProps({
@@ -107,7 +107,7 @@ const { title, list } = defineProps({
           font-weight: 600;
           color: #333;
         }
-        .item__msg-explain {
+        .item__msg-info {
           font-size: 1rem;
           font-weight: 500;
           color: #000;
