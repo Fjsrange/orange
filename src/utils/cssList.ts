@@ -2,13 +2,13 @@
 import { createApp } from 'vue';
  * css列表
 */
-import {ref} from 'vue';
+// import {ref} from 'vue';
 // import { REACT_APP_API_BASE_URL } from '';
 // 导入图片模块
-const imageModules = import.meta.glob('@/assets/images/CSS/*.{png,jpg,jpeg,svg}', {
-  eager: true,
-  import: 'default'
-});
+// const imageModules = import.meta.glob('@/assets/images/CSS/*.{png,jpg,jpeg,svg}', {
+//   eager: true,
+//   import: 'default'
+// });
 // console.log('imageModules',imageModules);
 // let img = REACT_APP_API_BASE_URL +'/assets/images/CSS/微信图片_20240511135022.jpg'
 // let img = 'https://fjsrange.github.io/orange/assets/images/CSS/微信图片_20240511135022.jpg'
@@ -19,7 +19,7 @@ const imageModules = import.meta.glob('@/assets/images/CSS/*.{png,jpg,jpeg,svg}'
 //   import: 'default'
 // }))
 // console.log('images',images.value);
-let url = new URL(import.meta.url).host; // 获取当前 URL 的主机名
+// let url = new URL(import.meta.url).host; // 获取当前 URL 的主机名
 // console.log('url',url);
 
 

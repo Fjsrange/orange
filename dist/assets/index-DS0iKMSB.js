@@ -1,0 +1,1 @@
+import{_ as s,c as o,f as t,o as n}from"./index-C20rGLUk.js";const c={},r={class:""};function a(_,e){return n(),o("div",r,e[0]||(e[0]=[t("h1",null,"主题",-1)]))}const f=s(c,[["render",a]]);export{f as default};
